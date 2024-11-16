@@ -157,8 +157,8 @@ class SoftDisableAlert(Alert):
   def __init__(self, alert_text_2: str):
     super().__init__("TAKE CONTROL IMMEDIATELY", alert_text_2,
                      AlertStatus.userPrompt, AlertSize.small,
-                     Priority.MID, VisualAlert.steerRequired,
-                     AudibleAlert.warningSoft, 2.),
+                     Priority.MID, VisualAlert.none,
+                     AudibleAlert.warningSoft, 1.),
 
 
 # less harsh version of SoftDisable, where the condition is user-triggered
@@ -173,7 +173,7 @@ class ImmediateDisableAlert(Alert):
     super().__init__("TAKE CONTROL IMMEDIATELY", alert_text_2,
                      AlertStatus.userPrompt, AlertSize.small,
                      Priority.MID, VisualAlert.steerRequired,
-                     AudibleAlert.warningSoft, 2.),
+                     AudibleAlert.warningSoft, 1.),
 
 
 class EngagementAlert(Alert):
